@@ -166,13 +166,42 @@
         padding: 40px;
         font-size: 14px;
     }
+    /* ---------- MOBILE RESPONSIVE RULES ---------- */
+@media (max-width: 900px) {
+
+    /* Reorder hero section on mobile */
+    .hero-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-left {
+        order: 2;
+    }
+
+    .hero-right {
+        order: 1;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    /* Adjust logo size for mobile */
+    .hero-right img.logo {
+        width: 200px;
+    }
+
+    /* Keep sections readable and spaced */
+    section {
+        padding: 40px 5%;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <!-- HERO -->
-<div class="hero">
+<div class="hero hero-flex">
     <div class="hero-left">
         <img src="hero.png" alt="Team Meeting">
     </div>
@@ -250,5 +279,6 @@
 
 </body>
 </html>
+
 
 
