@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahakam Holding Group</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Georgia", serif;
+        background-color: #0b1430;
+        color: #ffffff;
+    }
+
+    /* -------- HERO -------- */
+    .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 450px;
+    margin-bottom: 80px;
+    }
+
+    @media(max-width: 900px) {
+        .hero {
+            grid-template-columns: 1fr;
+            height: auto;
+            margin-bottom: 120px;
+        }
+    }
+
+    .hero-left img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .hero-right {
+        background: #f4f0e9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #0b1430;
+        text-align: center;
+        padding: 40px;
+    }
+    .hero-right img.logo {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+    .hero-right h1 {
+        font-size: 42px;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+    .hero-right p {
+        margin-top: 8px;
+        font-size: 18px;
+    }
+
+    /* -------- SECTION TITLES -------- */
+    section {
+        padding: 60px 10%;
+    }
+    h2.section-title {
+        font-size: 36px;
+        margin-bottom: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* -------- ABOUT US -------- */
+    .about-grid {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .about-card {
+        background: #ffffff;
+        color: #0b1430;
+        width: 300px;
+        padding-bottom: 25px;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+    .about-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    .about-card h3 {
+        font-size: 20px;
+        margin: 15px 20px;
+    }
+    .about-card p {
+        margin: 0 20px 20px 20px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* -------- SERVICES -------- */
+    .services {
+        background: #f4f0e9;
+        color: #0b1430;
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+    }
+    .service-box {
+        background: #bfa35a;
+        padding: 25px;
+        border-radius: 14px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .service-desc {
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 14px;
+        font-size: 15px;
+        color: #0b1430;
+        line-height: 1.5;
+    }
+
+    /* -------- PORTFOLIO -------- */
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+    .portfolio-grid img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    ul.portfolio-list {
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    /* -------- CONTACT -------- */
+    .contact {
+        background: #f4f0e9;
+        color: #0b1430;
+        text-align: center;
+        padding: 60px 10%;
+    }
+    .contact h2 {
+        font-size: 40px;
+    }
+    .email-btn {
+        background: #0b1430;
+        color: white;
+        padding: 10px 22px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 15px;
+        text-decoration: none;
+    }
+    footer {
+        text-align: center;
+        padding: 40px;
+        font-size: 14px;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-left">
+        <img src="hero.png" alt="Team Meeting">
+    </div>
+    <div class="hero-right">
+        <img src="logo.png" class="logo" alt="Mahakam Logo">
+        <h1>MAHAKAM</h1>
+        <p>HOLDING GROUP</p>
+    </div>
+</div>
+
+<!-- ABOUT US -->
+<section>
+    <h2 class="section-title">ABOUT US</h2>
+
+    <div class="about-grid">
+        <div class="about-card">
+            <img src="about1.png" alt="">
+            <h3>Collaboration</h3>
+            <p>We foster collaborative environments that drive innovation and growth.</p>
+        </div>
+
+        <div class="about-card">
+            <img src="about2.png" alt="">
+            <h3>Vision</h3>
+            <p>Our vision centers on creating sustainable solutions for a better future.</p>
+        </div>
+
+        <div class="about-card">
+            <img src="about3.png" alt="">
+            <h3>Legacy</h3>
+            <p>We operate across global sectors with disciplined investment and integrity.</p>
+        </div>
+    </div>
+</section>
+
+<!-- OUR SERVICES -->
+<section class="services">
+    <h2 class="section-title">OUR SERVICES</h2>
+
+    <div class="services-grid">
+        <div class="service-box">Strategic Investment</div>
+        <div class="service-desc">We identify, acquire, and grow high-potential businesses across resilient sectors.</div>
+
+        <div class="service-box" style="background:#1b253a; color:white;">Operational Excellence</div>
+        <div class="service-desc">We strengthen companies through leadership, process optimization and innovation.</div>
+
+        <div class="service-box" style="background:#1b253a; color:white;">Long-term Value Creation</div>
+        <div class="service-desc">We prioritize sustainable, ethical, and enduring growth.</div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section>
+    <h2 class="section-title">OUR PORTFOLIO</h2>
+
+    <div class="portfolio-grid">
+        <img src="portfolio.png" alt="Portfolio Team">
+        <ul class="portfolio-list">
+            <li>Innovative project strategies</li>
+            <li>Creative design solutions</li>
+            <li>Client success stories</li>
+        </ul>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out for any inquiries or support</p>
+
+    <a href="mailto:info@mahakamholdinggroup.com" class="email-btn">Email</a>
+</div>
+
+<footer>
+    info@mahakamholdinggroup.com
+</footer>
+
+</body>
+</html>
