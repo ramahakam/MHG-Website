@@ -215,11 +215,11 @@ a:hover {
 }
 
 /* Cards */
-.card {
-  background: #ffffff;
-  padding: 1.25rem;
+.pillars .card {
+  background: var(--charcoal-slate);  /* #2F3A44 */
+  color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(26, 35, 52, 0.04);
+  padding: 1.25rem;
 }
 .card h3 {
   margin: 0 0 0.5rem 0;
@@ -321,6 +321,7 @@ a:hover {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 }
+
 
 
 
