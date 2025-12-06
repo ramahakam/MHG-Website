@@ -150,7 +150,7 @@ a:hover {
 .hero {
   background: var(--mahakam-navy);
   padding-block: 4rem;
-  color: #ffffff;
+  color: #1A2334;
 }
 
 .hero-inner {
@@ -321,5 +321,6 @@ a:hover {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 }
+
 
 
