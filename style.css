@@ -148,7 +148,7 @@ a:hover {
 
 /* HERO (Midnight Navy background) */
 .hero {
-  background: var(--mahakam-navy);
+  background: #1A2334;
   padding-block: 4rem;
   color: #1A2334;
 }
@@ -321,6 +321,7 @@ a:hover {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 }
+
 
 
 
