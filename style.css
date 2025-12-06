@@ -289,8 +289,8 @@ a:hover {
     padding-block: 4.5rem;
   }
   .hero-inner {
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
   }
 
   .primary-nav {
@@ -321,4 +321,5 @@ a:hover {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 }
+
 
