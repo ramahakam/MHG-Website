@@ -146,42 +146,45 @@ a:hover {
   display: block;
 }
 
-/* HERO */
+/* HERO (Midnight Navy background) */
 .hero {
-  padding-block: 3.5rem;
-  background: linear-gradient(
-    180deg,
-    rgba(242, 237, 226, 1),
-    rgba(255, 255, 255, 0.95)
-  );
+  background: var(--mahakam-navy);
+  padding-block: 4rem;
+  color: #ffffff;
 }
+
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
 }
+
 .hero-copy h1 {
   font-family: var(--ff-serif);
-  font-size: clamp(1.9rem, 3.4vw, 3rem);
-  color: var(--mahakam-navy);
-  margin: 0 0 0.5rem 0;
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  color: #ffffff;
+  margin: 0 0 0.75rem 0;
   font-weight: 700;
   line-height: 1.05;
 }
+
 .subhead {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
   margin: 0;
-  color: var(--charcoal-slate);
-  font-size: 1.05rem;
   max-width: 54ch;
 }
+
+/* Hero image on dark background */
 .hero-image img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
-  box-shadow: 0 6px 20px rgba(26, 35, 52, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
+
 
 /* Sections */
 .section {
@@ -318,3 +321,4 @@ a:hover {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 }
+
