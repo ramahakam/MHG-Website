@@ -252,15 +252,16 @@ a:hover {
 .focus-grid {
   grid-template-columns: 1fr;
 }
+/* Focus Areas — Softer Silver Cards */
 .focus-item {
-  background: #ffffff;
+  background: var(--steel-silver); /* #C9CCD1 */
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   padding-bottom: 1rem;
-  box-shadow: 0 6px 18px rgba(26, 35, 52, 0.04);
+  box-shadow: 0 6px 18px rgba(26, 35, 52, 0.15);
 }
 .focus-item img {
   width: 100%;
@@ -268,11 +269,13 @@ a:hover {
   object-fit: cover;
   display: block;
 }
+/* Headings on silver */
 .focus-item h4 {
   margin: 0 0 0.25rem 1rem;
   color: var(--mahakam-navy);
   font-family: var(--ff-serif);
 }
+/* Text on silver */
 .focus-item p {
   margin: 0 1rem;
   font-size: 0.95rem;
@@ -338,6 +341,7 @@ a:hover {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 }
+
 
 
 
