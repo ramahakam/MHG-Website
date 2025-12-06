@@ -216,16 +216,36 @@ a:hover {
 
 /* Cards */
 .pillars .card {
-  background: var(--charcoal-slate);  /* #2F3A44 */
+  background: var(--charcoal-slate);       /* #2F3A44 */
   color: #ffffff;
   border-radius: 10px;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(26, 35, 52, 0.18);
 }
+/* Gold accent top border */
+.pillars .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: var(--mahakam-gold);   /* #B69352 */
+  border-radius: 10px 10px 0 0;
+}
+/* Heading + text */
 .pillars .card h3 {
-  color: var(--soft-ivory);
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--soft-ivory);   /* #F2EDE2 */
+  font-family: var(--ff-serif);
 }
 .pillars .card p {
   color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.5;
 }
 
 /* Focus areas */
@@ -318,6 +338,7 @@ a:hover {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 }
+
 
 
 
