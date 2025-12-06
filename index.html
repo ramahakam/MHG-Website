@@ -1,296 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mahakam Holding Group</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mahakam Holding Group</title>
 
-<style>
-    body {
-        margin: 0;
-        font-family: "Cormorant Garamond/", serif;
-        background-color: #1A2334;
-        color: #F2EDE2;
-    }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* -------- HERO -------- */
-    .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 450px;
-    margin-bottom: 80px;
-    }
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 
-    @media(max-width: 900px) {
-        .hero {
-            grid-template-columns: 1fr;
-            height: auto;
-            margin-bottom: 120px;
-        }
-    }
-
-    .hero-left img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .hero-right {
-        background: #F2EDE2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        color: #0b1430;
-        text-align: center;
-        padding: 40px;
-    }
-    .hero-right img.logo {
-        width: 260px; /* adjust this number to preferred size */
-        margin-bottom: 20px;
-    }
-    .hero-right h1 {
-        font-size: 42px;
-        margin: 0;
-        letter-spacing: 2px;
-    }
-    .hero-right p {
-        margin-top: 8px;
-        font-size: 18px;
-    }
-
-    /* -------- SECTION TITLES -------- */
-    section {
-        padding: 60px 10%;
-    }
-    h2.section-title {
-        font-size: 36px;
-        margin-bottom: 40px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    /* -------- ABOUT US -------- */
-    .about-grid {
-        display: flex;
-        gap: 40px;
-        flex-wrap: wrap;
-    }
-    .about-card {
-        background: #ffffff;
-        color: #0b1430;
-        width: 300px;
-        padding-bottom: 25px;
-        border-radius: 14px;
-        overflow: hidden;
-    }
-    .about-card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
-    .about-card h3 {
-        font-size: 20px;
-        margin: 15px 20px;
-    }
-    .about-card p {
-        margin: 0 20px 20px 20px;
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    /* -------- SERVICES -------- */
-    .services {
-        background: #F2EDE2;
-        color: #0b1430;
-    }
-    .services-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 30px;
-    }
-    .service-box {
-        background: #bfa35a;
-        padding: 25px;
-        border-radius: 14px;
-        text-align: center;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    .service-desc {
-        background: #ffffff;
-        padding: 25px;
-        border-radius: 14px;
-        font-size: 15px;
-        color: #0b1430;
-        line-height: 1.5;
-    }
-
-    /* -------- PORTFOLIO -------- */
-    .portfolio-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-    }
-    .portfolio-grid img {
-        width: 100%;
-        border-radius: 10px;
-    }
-    ul.portfolio-list {
-        font-size: 16px;
-        line-height: 2;
-    }
-
-    /* -------- CONTACT -------- */
-    .contact {
-        background: #F2EDE2;
-        color: #0b1430;
-        text-align: center;
-        padding: 60px 10%;
-    }
-    .contact h2 {
-        font-size: 40px;
-    }
-    .email-btn {
-        background: #C9CCD1;
-        color: #ffffff
-        padding: 10px 22px;
-        border-radius: 20px;
-        display: inline-block;
-        margin-top: 15px;
-        text-decoration: none;
-    }
-    footer {
-        text-align: center;
-        padding: 40px;
-        font-size: 14px;
-    }
-    /* ---------- MOBILE RESPONSIVE RULES ---------- */
-@media (max-width: 900px) {
-
-    /* Reorder hero section on mobile */
-    .hero-flex {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .hero-left {
-        order: 2;
-    }
-
-    .hero-right {
-        order: 1;
-        padding-top: 20px;
-        text-align: center;
-    }
-
-    /* Adjust logo size for mobile */
-    .hero-right img.logo {
-        width: 200px;
-    }
-
-    /* Keep sections readable and spaced */
-    section {
-        padding: 40px 5%;
-    }
-}
-</style>
+  <meta name="description" content="Mahakam Holding Group — Strategic investments shaped by discipline, heritage, and long-term value creation.">
 </head>
-
 <body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logo: image only, no text -->
+      <a class="logo" href="#home" aria-label="Mahakam Holding Group home" title="Mahakam Holding Group">
+        <!-- Put your logo file at assets/logo.png -->
+        <img src="assets/logo.png" alt="Mahakam Holding Group logo" class="logo-img">
+      </a>
 
-<!-- HERO -->
-<div class="hero hero-flex">
-    <div class="hero-left">
-        <img src="hero.png" alt="Team Meeting">
-    </div>
-    <div class="hero-right">
-        <img src="logo.png" class="logo" alt="Mahakam Logo">
-    </div>
-</div>
-
-<!-- ABOUT US -->
-<section>
-    <h2 class="section-title">ABOUT US</h2>
-
-    <div class="about-grid">
-        <div class="about-card">
-            <img src="about1.png" alt="">
-            <h3>Collaboration</h3>
-            <p>We foster collaborative environments that drive innovation and growth.</p>
-        </div>
-
-        <div class="about-card">
-            <img src="about2.png" alt="">
-            <h3>Vision</h3>
-            <p>Our vision centers on creating sustainable solutions for a better future.</p>
-        </div>
-
-        <div class="about-card">
-            <img src="about3.png" alt="">
-            <h3>Legacy</h3>
-            <p>We operate across global sectors with disciplined investment and integrity.</p>
-        </div>
-    </div>
-</section>
-
-<!-- OUR SERVICES -->
-<section class="services">
-    <h2 class="section-title">OUR SERVICES</h2>
-
-    <div class="services-grid">
-        <div class="service-box">Strategic Investment</div>
-        <div class="service-desc">We identify, acquire, and grow high-potential businesses across resilient sectors.</div>
-
-        <div class="service-box" style="background:#1b253a; color:white;">Operational Excellence</div>
-        <div class="service-desc">We strengthen companies through leadership, process optimization and innovation.</div>
-
-        <div class="service-box" style="background:#1b253a; color:white;">Long-term Value Creation</div>
-        <div class="service-desc">We prioritize sustainable, ethical, and enduring growth.</div>
-    </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section>
-    <h2 class="section-title">OUR PORTFOLIO</h2>
-
-    <div class="portfolio-grid">
-        <img src="portfolio.png" alt="Portfolio Team">
-        <ul class="portfolio-list">
-            <li>Innovative project strategies</li>
-            <li>Creative design solutions</li>
-            <li>Client success stories</li>
+      <!-- Desktop / tablet nav -->
+      <nav class="primary-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#pillars">Values</a></li>
+          <li><a href="#focus">Focus Areas</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
     </div>
-</section>
 
-<!-- CONTACT -->
-<div class="contact">
-    <h2>Contact Us</h2>
-    <p>Reach out for any inquiries or support</p>
+    <!-- Mobile nav panel -->
+    <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pillars">Values</a></li>
+        <li><a href="#focus">Focus Areas</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <a href="mailto:info@mahakamholdinggroup.com" class="email-btn">Email</a>
-    <p class="email-text">info@mahakamholdinggroup.com</p>
-</section>
-</div>
+  <main id="home">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-heading">Mahakam Holding Group</h1>
+          <p class="subhead">
+            Strategic investments shaped by discipline, heritage, and long-term value creation.
+          </p>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <!-- Replace with assets/hero.jpg -->
+          <img src="assets/hero.jpg" alt="">
+        </div>
+      </div>
+    </section>
 
-<footer>
-</footer>
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-inner">
+          <h2>About</h2>
+          <p class="lead">
+            Mahakam Holding Group is a privately held organization focused on disciplined investment,
+            operational excellence, and sustainable long-term growth. Our approach combines data-driven
+            decision making with the enduring principles of stewardship, integrity, and responsible leadership.
+            We invest in sectors that strengthen communities, create enduring value, and support strategic
+            innovation across industries.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- VALUES / PILLARS -->
+    <section id="pillars" class="section pillars">
+      <div class="container">
+        <h2>Our Values</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Legacy</h3>
+            <p>
+              We build with a multi-generational perspective, ensuring stability, continuity,
+              and value that lasts.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Integrity</h3>
+            <p>
+              Every decision reflects our commitment to responsible governance, transparency,
+              and ethical leadership.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Strategic Growth</h3>
+            <p>
+              We pursue opportunities that unlock long-term potential, strengthen core capabilities,
+              and drive meaningful impact.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS AREAS / SUBSIDIARIES -->
+    <section id="focus" class="section focus">
+      <div class="container">
+        <h2>Focus Areas</h2>
+        <div class="grid focus-grid">
+          <div class="focus-item">
+            <img src="assets/real-estate.jpg" alt="Modern real estate development">
+            <h4>Real Estate &amp; Property Development</h4>
+            <p>
+              Stabilizing portfolios and creating long-term value through thoughtful development
+              and asset management.
+            </p>
+          </div>
+          <div class="focus-item">
+            <img src="assets/healthcare.jpg" alt="Healthcare environment">
+            <h4>Healthcare &amp; Clinical Management</h4>
+            <p>
+              Delivering operational excellence and sustainable solutions for health systems and
+              clinical enterprises.
+            </p>
+          </div>
+          <div class="focus-item">
+            <img src="assets/consumer.jpg" alt="Consumer lifestyle products">
+            <h4>Consumer Brands &amp; Lifestyle Ventures</h4>
+            <p>
+              Investing in premium, sustainable brands that connect with modern consumers and
+              everyday life.
+            </p>
+          </div>
+          <div class="focus-item">
+            <img src="assets/tech.jpg" alt="Technology and digital infrastructure">
+            <h4>Emerging Technologies &amp; Digital Infrastructure</h4>
+            <p>
+              Backing innovation that scales, accelerates transformation, and delivers strategic advantage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          To connect with our team, please email
+          <a href="mailto:info@mahakamholdinggroup.com">info@mahakamholdinggroup.com</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <small>© 2025 Mahakam Holding Group. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Mobile nav script -->
+  <script>
+    (function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const mobileNav = document.getElementById('mobile-menu');
+
+      if (!navToggle || !mobileNav) return;
+
+      navToggle.addEventListener('click', function () {
+        const isOpen = mobileNav.classList.toggle('is-open');
+        this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      // Close mobile menu when clicking a link
+      mobileNav.addEventListener('click', function (event) {
+        if (event.target.tagName.toLowerCase() === 'a') {
+          mobileNav.classList.remove('is-open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

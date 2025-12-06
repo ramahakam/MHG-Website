@@ -1,0 +1,320 @@
+/* Mahakam Holding Group — Clean Corporate
+   Mobile-first, responsive layout
+*/
+
+/* Brand variables */
+:root {
+  --mahakam-gold: #B69352;
+  --mahakam-navy: #1A2334;
+  --charcoal-slate: #2F3A44;
+  --soft-ivory: #F2EDE2;
+  --steel-silver: #C9CCD1;
+
+  --ff-serif: "Cormorant Garamond", serif;
+  --ff-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --max-width: 1100px;
+  --container-pad: 1.25rem;
+}
+
+/* Basic reset */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--ff-sans);
+  color: var(--charcoal-slate);
+  background: var(--soft-ivory);
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links */
+a {
+  color: var(--mahakam-navy);
+}
+a:hover {
+  color: var(--mahakam-gold);
+}
+
+/* Layout helpers */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-inline: var(--container-pad);
+}
+
+/* HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(242, 237, 226, 0.9);
+  border-bottom: 1px solid rgba(47, 58, 68, 0.06);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.75rem;
+}
+
+/* Logo */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-img {
+  display: block;
+  height: 44px;   /* Adjust if needed */
+  width: auto;
+}
+
+/* Desktop nav */
+.primary-nav {
+  display: none; /* shown from medium screens up */
+}
+.primary-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.25rem;
+}
+.primary-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--mahakam-navy);
+}
+.primary-nav a:hover {
+  color: var(--mahakam-gold);
+}
+
+/* Mobile nav toggle */
+.nav-toggle {
+  border: none;
+  background: none;
+  padding: 0.25rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.nav-toggle-bar {
+  width: 20px;
+  height: 2px;
+  background: var(--mahakam-navy);
+  border-radius: 999px;
+}
+
+/* Mobile nav panel */
+.mobile-nav {
+  display: none;
+  background: rgba(242, 237, 226, 0.98);
+  border-bottom: 1px solid rgba(47, 58, 68, 0.06);
+}
+.mobile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem var(--container-pad) 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--mahakam-navy);
+  font-weight: 500;
+}
+.mobile-nav a:hover {
+  color: var(--mahakam-gold);
+}
+.mobile-nav.is-open {
+  display: block;
+}
+
+/* HERO */
+.hero {
+  padding-block: 3.5rem;
+  background: linear-gradient(
+    180deg,
+    rgba(242, 237, 226, 1),
+    rgba(255, 255, 255, 0.95)
+  );
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+.hero-copy h1 {
+  font-family: var(--ff-serif);
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
+  color: var(--mahakam-navy);
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  line-height: 1.05;
+}
+.subhead {
+  margin: 0;
+  color: var(--charcoal-slate);
+  font-size: 1.05rem;
+  max-width: 54ch;
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(26, 35, 52, 0.08);
+}
+
+/* Sections */
+.section {
+  padding-block: 2.25rem;
+  background: transparent;
+}
+.section h2 {
+  font-family: var(--ff-serif);
+  color: var(--mahakam-navy);
+  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+}
+
+/* About */
+.lead {
+  max-width: 72ch;
+  color: var(--charcoal-slate);
+}
+
+/* Grid helpers */
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(26, 35, 52, 0.04);
+}
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  font-family: var(--ff-serif);
+  color: var(--mahakam-navy);
+}
+.card p {
+  margin: 0;
+  color: var(--charcoal-slate);
+}
+
+/* Focus areas */
+.focus-grid {
+  grid-template-columns: 1fr;
+}
+.focus-item {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 6px 18px rgba(26, 35, 52, 0.04);
+}
+.focus-item img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+.focus-item h4 {
+  margin: 0 0 0.25rem 1rem;
+  color: var(--mahakam-navy);
+  font-family: var(--ff-serif);
+}
+.focus-item p {
+  margin: 0 1rem;
+  font-size: 0.95rem;
+  color: var(--charcoal-slate);
+}
+
+/* Contact */
+.contact p {
+  max-width: 40rem;
+}
+
+/* Footer */
+.site-footer {
+  padding-block: 1.25rem;
+  border-top: 1px solid rgba(47, 58, 68, 0.06);
+  background: rgba(242, 237, 226, 0.98);
+}
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-inner small {
+  color: rgba(47, 58, 68, 0.8);
+  font-size: 0.8rem;
+}
+
+/* Medium screens and up */
+@media (min-width: 700px) {
+  .hero {
+    padding-block: 4.5rem;
+  }
+  .hero-inner {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 2rem;
+  }
+
+  .primary-nav {
+    display: block;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .mobile-nav {
+    display: none !important;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .focus-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .header-inner {
+    padding-block: 1rem;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 1100px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  }
+}
