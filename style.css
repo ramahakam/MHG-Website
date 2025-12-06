@@ -77,7 +77,7 @@ a:hover {
 }
 .logo-img {
   display: block;
-  height: 44px;   /* Adjust if needed */
+  height: 72px;   /* Adjust if needed */
   width: auto;
 }
 
@@ -321,6 +321,7 @@ a:hover {
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   }
 }
+
 
 
 
